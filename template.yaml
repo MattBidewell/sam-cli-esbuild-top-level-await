@@ -1,9 +1,13 @@
-Parameters:
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+Description: "Test for top level await support on esbuild and sam CLI"
+
+Resources:
   myFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: app.lambdaHandler
-      CodeUri: ./src
+      CodeUri: ./
       Runtime: nodejs18.x
       FunctionName: "MyTestFunction"
     Metadata: # Manage esbuild properties

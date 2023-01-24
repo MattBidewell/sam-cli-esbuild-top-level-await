@@ -1,0 +1,29 @@
+{
+  "name": "sam-cli-esbuild-top-level-await",
+  "version": "1.0.0",
+  "description": "Small project to demo an issue with top level await when using AWS Sam CLI and esbuild",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattBidewell/sam-cli-esbuild-top-level-await.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattBidewell/sam-cli-esbuild-top-level-await/issues"
+  },
+  "homepage": "https://github.com/MattBidewell/sam-cli-esbuild-top-level-await#readme",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.109",
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.4"
+  }
+}

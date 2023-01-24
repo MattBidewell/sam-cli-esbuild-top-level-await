@@ -1,0 +1,17 @@
+Parameters:
+  myFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambdaHandler
+      CodeUri: ./src
+      Runtime: nodejs18.x
+      FunctionName: "MyTestFunction"
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true # Enabling source maps will create the required NODE_OPTIONS environment variables on your lambda function during sam build
+        EntryPoints:
+          - src/handler.ts
+        External:

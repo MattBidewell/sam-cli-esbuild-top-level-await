@@ -6,14 +6,17 @@ Resources:
   myFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app.lambdaHandler
+      Handler: handler.lambdaHandler
       CodeUri: ./
       Runtime: nodejs18.x
       FunctionName: "MyTestFunction"
     Metadata: # Manage esbuild properties
       BuildMethod: esbuild
       BuildProperties:
-        Target: "es2020"
+        Target: "node18"
+        Format: esm
+        OutExtension:
+          - .js=.mjs
         Sourcemap: true
         EntryPoints:
           - src/handler.ts

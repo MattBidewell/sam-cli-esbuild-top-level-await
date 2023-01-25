@@ -1,6 +1,7 @@
 {
   "name": "sam-cli-esbuild-top-level-await",
   "version": "1.0.0",
+  "type": "module",
   "description": "Small project to demo an issue with top level await when using AWS Sam CLI and esbuild",
   "main": "index.js",
   "scripts": {

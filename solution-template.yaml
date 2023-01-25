@@ -6,7 +6,7 @@ Resources:
   myFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app.lambdaHandler
+      Handler: handler.lambdaHandler
       CodeUri: ./
       Runtime: nodejs18.x
       FunctionName: "MyTestFunction"
@@ -15,6 +15,3 @@ Resources:
       BuildProperties:
         Target: "node18"
         Format: esm
-        Sourcemap: true
-        EntryPoints:
-          - src/handler.ts

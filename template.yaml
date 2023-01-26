@@ -13,10 +13,11 @@ Resources:
     Metadata: # Manage esbuild properties
       BuildMethod: esbuild
       BuildProperties:
-        Target: ""
+        Target: "node18"
         Format: esm
+        UseNpmCi: true
         OutExtension:
-          - .ts=.mjs
+          - .js=.mjs
         Sourcemap: true
         EntryPoints:
           - src/handler.ts

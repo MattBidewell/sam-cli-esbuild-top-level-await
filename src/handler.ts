@@ -1,3 +1,5 @@
+import * as jest from "jest"
+
 export class Lambda {
   constructor(){}
 
@@ -20,3 +22,7 @@ await promise;
 
 const handlerClass = new Lambda();
 export const lambdaHandler = handlerClass.handler.bind(handlerClass);
+
+function test() {
+  console.log("unused")
+}
